@@ -122,4 +122,16 @@ trait AppearanceHelpers
             ->setParameter('adm_small_icon', $iconPath)
             ->setParameter('small_icon', $iconPath);
     }
+
+    /**
+     * Set the Web Badge only for Chrome 56+ .
+     *
+     * @param string $badgePath
+     *
+     * @return $this
+     */
+    public function setChromeWebBadge(string $badgePath)
+    {
+        return $this->setParameter('chrome_web_badge', $badgePath);
+    }
 }
