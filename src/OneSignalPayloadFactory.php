@@ -35,6 +35,7 @@ class OneSignalPayloadFactory
             $payload['excluded_segments'] = collect($targeting['excluded_segments']);
         } elseif (static::isTargetingExternalUserIds($targeting)) {
             $payload['include_external_user_ids'] = collect($targeting['include_external_user_ids']);
+            $payload['channel_for_external_user_ids'] = 'push';
         } else {
             $payload['include_player_ids'] = collect($targeting);
         }
