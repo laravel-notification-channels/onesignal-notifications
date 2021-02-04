@@ -122,4 +122,18 @@ trait AppearanceHelpers
             ->setParameter('adm_small_icon', $iconPath)
             ->setParameter('small_icon', $iconPath);
     }
+    
+    /**
+     * Set the message large icon.
+     *
+     * @param string $iconPath
+     *
+     * @return $this
+     */
+    public function setLargeIcon(string $iconPath)
+    {
+        return $this->setParameter('large_icon', $iconPath)
+            ->setParameter('huawei_large_icon', $iconPath)
+            ->setParameter('adm_large_icon', $iconPath);
+    }
 }
