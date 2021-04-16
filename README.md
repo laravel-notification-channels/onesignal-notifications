@@ -124,6 +124,8 @@ public function routeNotificationForOneSignal()
 
 If you want to send the notification based on an external user id you set using the `setExternalUserId` feature. This makes it really easy to target users based on their Laravel User Ids.
 
+**Note:** `include_external_user_ids` must be an array of non empty strings
+
 ```php
 public function routeNotificationForOneSignal()
 {
